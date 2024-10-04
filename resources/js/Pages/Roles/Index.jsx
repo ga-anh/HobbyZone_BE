@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Layout from '../../components/Layout'
+import Layout from '../../Components/Layout'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Notyf } from 'notyf';
