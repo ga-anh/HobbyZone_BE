@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RolesController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -13,7 +14,7 @@ use Inertia\Inertia;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::prefix('admin')->group(function () {
+    Route::resource('roles',RolesController::class);
 
-Route::get('/', function () {
-    return Inertia::render('Test/Index');
 });
