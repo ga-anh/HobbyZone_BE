@@ -21,9 +21,9 @@ return new class extends Migration
                 $table->string('guard_name')->nullable()->change();
             });
         }
-        if(Schema::hasTable('roles')){
-            Schema::table('roles', function (Blueprint $table) {
-               $table->unsignedBigInteger('idRole');
+        if(Schema::hasTable('users')){
+            Schema::table('users', function (Blueprint $table) {
+               $table->unsignedBigInteger('idRole')->after('password');
                $table->foreign('idRole')->references('id')->on('roles');
             });
         }
